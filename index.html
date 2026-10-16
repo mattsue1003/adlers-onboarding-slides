@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#153d36">
+  <title>愛迪樂｜新進同仁入職簡報</title>
+  <style>
+    :root{--ink:#173b35;--muted:#63736d;--cream:#f7f5ee;--mint:#dfece4;--lime:#c6dc79;--coral:#e47d62;--line:rgba(23,59,53,.15);--serif:Georgia,"Noto Serif TC",serif;--sans:Inter,"Noto Sans TC",system-ui,sans-serif}
+    *{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;font-family:var(--sans);color:var(--ink);background:#102d29}body{overflow:hidden}
+    .deck{height:100dvh;width:100%;display:grid;place-items:center;padding:24px}.slide{display:none;position:relative;width:min(1200px,calc(100vw - 48px));height:min(675px,calc((100vw - 48px)*.5625),calc(100dvh - 48px));min-height:420px;overflow:hidden;background:var(--cream);padding:clamp(30px,5.5vw,74px);box-shadow:0 28px 90px #071d1a80;animation:enter .38s ease both}.slide.active{display:flex;flex-direction:column}.slide::after{content:"";position:absolute;width:380px;height:380px;border:1px solid var(--line);border-radius:50%;right:-230px;top:-230px;pointer-events:none}@keyframes enter{from{opacity:.3;transform:translateY(8px)}to{opacity:1;transform:none}}
+    .eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#658276;font-weight:750}.slide-no{position:absolute;right:clamp(30px,5.5vw,74px);top:clamp(30px,5.5vw,74px);font-size:12px;color:#83918a;letter-spacing:.12em}.title{font-family:var(--serif);font-weight:500;letter-spacing:-.045em;font-size:clamp(38px,6vw,72px);line-height:1.12;margin:18px 0 20px}.subtitle{font-size:clamp(16px,2vw,21px);line-height:1.8;color:var(--muted);max-width:700px}.accent{color:#75913c}.foot{position:absolute;left:clamp(30px,5.5vw,74px);right:clamp(30px,5.5vw,74px);bottom:24px;display:flex;justify-content:space-between;font-size:11px;color:#7b8982;letter-spacing:.06em}.rule{width:54px;height:3px;background:var(--coral);margin:8px 0 18px}
+    .cover{background:var(--ink);color:var(--cream);justify-content:center}.cover .eyebrow,.cover .subtitle{color:#c1d2c8}.cover .title{font-size:clamp(54px,9vw,108px);max-width:800px}.cover .accent{color:var(--lime)}.cover::before{content:"";position:absolute;width:480px;height:480px;border-radius:50%;right:-90px;bottom:-260px;background:radial-gradient(circle at 35% 35%,#c6dc79 0 2px,transparent 3px),radial-gradient(circle,#345e50 0 46%,transparent 46.5%);opacity:.8}.cover::after{width:500px;height:500px;border-color:#ffffff22;right:-250px;top:auto;bottom:-170px}.cover .foot{color:#bdc9c2}.cover-mark{position:absolute;right:12%;top:18%;font-family:var(--serif);font-size:190px;color:#ffffff0b;font-weight:700;letter-spacing:-.1em}
+    .split{display:grid!important;grid-template-columns:1.05fr .95fr;gap:6%;align-items:center}.quote{font-family:var(--serif);font-size:clamp(25px,3.5vw,43px);line-height:1.55;letter-spacing:-.02em}.quote em{color:#75913c;font-style:normal}.orb{aspect-ratio:1;border-radius:50%;background:var(--mint);display:grid;place-items:center;position:relative}.orb::before,.orb::after{content:"";position:absolute;border:1px solid #72908155;border-radius:50%;inset:10%}.orb::after{inset:22%}.orb-core{width:42%;height:42%;border-radius:50%;background:var(--ink);color:white;display:grid;place-items:center;text-align:center;font-family:var(--serif);font-size:clamp(15px,2vw,23px);line-height:1.35;z-index:1}.orb-label{position:absolute;background:var(--cream);padding:8px 12px;border-radius:20px;font-size:12px;font-weight:700;box-shadow:0 5px 18px #173b3515}.ol1{top:12%;left:14%}.ol2{top:17%;right:7%}.ol3{bottom:14%;left:11%}.ol4{bottom:11%;right:10%}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:25px}.card{background:#fffdf7;border:1px solid var(--line);padding:22px 21px;min-height:185px;position:relative}.card .num{font-family:var(--serif);font-size:32px;color:#91a66a}.card h3{margin:16px 0 8px;font-size:19px}.card p{margin:0;color:var(--muted);line-height:1.65;font-size:14px}.card .tag{position:absolute;right:18px;top:22px;color:#83918a;font-size:11px;letter-spacing:.08em}
+    .flow{display:flex;align-items:center;gap:12px;margin-top:40px}.step{flex:1;min-height:150px;padding:22px;background:#fffdf7;border:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between}.step strong{font-family:var(--serif);font-size:22px}.step span{color:var(--muted);font-size:13px;line-height:1.6}.arrow{font-size:24px;color:var(--coral)}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}.service{padding:18px 20px;background:#fffdf7;border-left:3px solid var(--lime)}.service h3{margin:0 0 7px;font-size:17px}.service p{margin:0;color:var(--muted);font-size:13px;line-height:1.65}
+    .locations{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:32px}.loc{border-top:2px solid var(--ink);padding:14px 5px}.loc b{display:block;font-size:15px;margin-bottom:8px}.loc span{font-size:12px;line-height:1.6;color:var(--muted)}.loc small{display:block;margin-top:12px;color:#829087;font-size:11px}
+    .close{background:var(--mint);justify-content:center}.close .title{max-width:800px}.pill{display:inline-flex;border:1px solid #72908166;border-radius:999px;padding:10px 15px;margin:10px 8px 0 0;font-size:13px;color:#4d6c5f}
+    .controls{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);display:flex;gap:10px;align-items:center;background:#09231fdd;color:#fff;padding:8px 12px;border-radius:30px;z-index:5;backdrop-filter:blur(10px)}.controls button{border:0;background:transparent;color:#fff;width:34px;height:30px;border-radius:18px;font-size:18px;cursor:pointer}.controls button:hover{background:#ffffff22}.counter{font-size:12px;min-width:48px;text-align:center;color:#d7e2dc}.progress{position:fixed;top:0;left:0;height:3px;background:var(--lime);z-index:7;width:0;transition:width .25s}.hint{position:fixed;right:22px;bottom:24px;font-size:11px;color:#d5e1db99;letter-spacing:.04em}
+    @media(max-width:720px){.deck{padding:0}.slide{width:100vw;height:100dvh;min-height:0;padding:34px 25px 56px}.slide-no{top:30px;right:25px}.foot{left:25px;right:25px;bottom:18px}.split{grid-template-columns:1fr!important;gap:20px}.orb{width:55%;margin:auto}.cards{gap:8px}.card{padding:14px 12px;min-height:200px}.card p{font-size:12px}.card h3{font-size:15px}.flow{gap:5px;margin-top:20px}.step{padding:12px 9px;min-height:140px}.step strong{font-size:16px}.step span{font-size:11px}.arrow{font-size:17px}.locations{grid-template-columns:repeat(2,1fr);gap:4px;margin-top:12px}.loc{padding:8px 5px}.loc:nth-child(5){grid-column:span 2}.grid2{gap:8px}.service{padding:12px}.service p{font-size:11px}.hint{display:none}}
+    @media(max-height:520px){.slide{padding-top:24px;padding-bottom:45px}.title{font-size:42px;margin:10px 0}.orb{width:48%}.cards{margin-top:10px}.card{min-height:140px;padding:12px}.flow{margin-top:12px}.step{min-height:110px}.locations{margin-top:12px}}
+    @media print{html,body{height:auto;overflow:visible;background:white}.deck{display:block;height:auto;padding:0}.slide,.slide.active{display:flex!important;width:100%;height:100vh;min-height:0;box-shadow:none;page-break-after:always;animation:none}.controls,.progress,.hint{display:none!important}@page{size:landscape;margin:0}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+  </style>
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+  <main class="deck" aria-label="愛迪樂新進同仁入職簡報">
+    <section class="slide cover active" aria-label="封面">
+      <div class="cover-mark" aria-hidden="true">AD</div><div class="eyebrow">ADLERS · 新進同仁入職簡報</div>
+      <h1 class="title">一起讓生活<br><span class="accent">重新發光。</span></h1>
+      <p class="subtitle">認識愛迪樂，以及我們如何陪伴每個人找回生活的能量與可能。</p>
+      <div class="foot"><span>愛迪樂健康促進團隊</span><span>WELCOME ABOARD</span></div>
+    </section>
+    <section class="slide split" aria-label="我們是誰">
+      <span class="slide-no">02 / 08</span><div><div class="eyebrow">WHO WE ARE</div><div class="rule"></div><h2 class="quote">我們相信，復能的目的不只是改善身體，而是讓人重新參與<em>自己想過的生活。</em></h2></div>
+      <div class="orb" aria-label="跨專業合作示意"><div class="orb-core">生活<br>重建</div><span class="orb-label ol1">治療師</span><span class="orb-label ol2">體適能</span><span class="orb-label ol3">輔具專家</span><span class="orb-label ol4">個案與家人</span></div>
+      <div class="foot"><span>愛迪樂 · 新進同仁</span><span>使命與合作</span></div>
+    </section>
+    <section class="slide" aria-label="我們服務誰">
+      <span class="slide-no">03 / 08</span><div class="eyebrow">WHO WE SERVE</div><div class="rule"></div><h2 class="title">從能力出發，<br>陪伴不同階段的人。</h2>
+      <div class="cards">
+        <article class="card"><span class="num">01</span><span class="tag">復健</span><h3>有復健需求的成人</h3><p>神經疾患、肌骨疼痛、術後恢復與動作功能訓練。</p></article>
+        <article class="card"><span class="num">02</span><span class="tag">長照</span><h3>銀髮、失智與失能者</h3><p>重建生活功能，提升自主性、參與感與日常能量。</p></article>
+        <article class="card"><span class="num">03</span><span class="tag">健康促進</span><h3>社區與企業夥伴</h3><p>把健康知識、認知促進與體能活動帶進日常場域。</p></article>
+      </div><div class="foot"><span>愛迪樂 · 新進同仁</span><span>以人為中心</span></div>
+    </section>
+    <section class="slide" aria-label="服務如何連結">
+      <span class="slide-no">04 / 08</span><div class="eyebrow">HOW WE WORK</div><div class="rule"></div><h2 class="title">服務跟著生活走。</h2><p class="subtitle">從專業評估到居家練習，再到社區支持，讓改變有機會延續。</p>
+      <div class="flow"><div class="step"><strong>理解需求</strong><span>傾聽個案與家屬的目標、習慣與生活情境。</span></div><b class="arrow">→</b><div class="step"><strong>共同規劃</strong><span>跨專業評估，設計適合個人的訓練與支持。</span></div><b class="arrow">→</b><div class="step"><strong>練習與調整</strong><span>在治療所、家中或社區持續練習並追蹤。</span></div><b class="arrow">→</b><div class="step"><strong>回到生活</strong><span>把能力帶回日常，逐步增加自主與參與。</span></div></div>
+      <div class="foot"><span>愛迪樂 · 新進同仁</span><span>評估 → 行動 → 參與</span></div>
+    </section>
+    <section class="slide" aria-label="服務版圖">
+      <span class="slide-no">05 / 08</span><div class="eyebrow">OUR SERVICES</div><div class="rule"></div><h2 class="title">專業走進不同場景。</h2>
+      <div class="grid2"><article class="service"><h3>治療所｜個別化專業介入</h3><p>物理治療、職能治療、神經與肌骨復健、認知及步態訓練。</p></article><article class="service"><h3>居家｜在熟悉環境復能</h3><p>居家長照、到府復能、輔具評估與家屬衛教。</p></article><article class="service"><h3>社區｜日照與健康促進</h3><p>日間照顧、認知促進、體能活化與社區關懷。</p></article><article class="service"><h3>合作｜把專業帶到更遠</h3><p>政府、社福與企業合作，提供講座、課程及創新方案。</p></article></div>
+      <div class="foot"><span>愛迪樂 · 新進同仁</span><span>治療所 · 居家 · 社區 · 合作</span></div>
+    </section>
+    <section class="slide" aria-label="跨專業團隊">
+      <span class="slide-no">06 / 08</span><div class="eyebrow">ONE TEAM</div><div class="rule"></div><h2 class="title">不同專業，一起看見完整的人。</h2><p class="subtitle">我們把專業放在同一張桌上，讓個案的目標成為共同方向。</p>
+      <div class="cards"><article class="card"><span class="num">P</span><h3>物理治療</h3><p>疼痛、動作、肌力、平衡與移動能力。</p></article><article class="card"><span class="num">O</span><h3>職能治療</h3><p>認知、上肢功能、日常活動與生活參與。</p></article><article class="card"><span class="num">＋</span><h3>跨域夥伴</h3><p>體適能老師、輔具專家、照顧者與社區夥伴。</p></article></div>
+      <div class="foot"><span>愛迪樂 · 新進同仁</span><span>一起工作，也一起學習</span></div>
+    </section>
+    <section class="slide" aria-label="服務據點">
+      <span class="slide-no">07 / 08</span><div class="eyebrow">WHERE WE ARE</div><div class="rule"></div><h2 class="title">在台北與新北，連結在地生活。</h2>
+      <div class="locations"><div class="loc"><b>台北中山</b><span>愛迪樂治療所<br>行天宮站周邊</span><small>物理／職能治療</small></div><div class="loc"><b>新北林口</b><span>居家長照機構<br>銀光幸福站</span><small>居家服務／健康促進</small></div><div class="loc"><b>新北林口</b><span>東湖國小社區<br>長照機構</span><small>日間照顧／社區長照</small></div><div class="loc"><b>新北五股</b><span>成州社區長照<br>機構（日照中心）</span><small>日間照顧／認知課程</small></div><div class="loc"><b>新北五股</b><span>成州障礙者<br>日照中心</span><small>日間照顧／專業復能</small></div></div>
+      <div class="foot"><span>愛迪樂 · 新進同仁</span><span>據點資訊依官網整理</span></div>
+    </section>
+    <section class="slide close" aria-label="加入我們">
+      <span class="slide-no">08 / 08</span><div class="eyebrow">YOUR NEXT CHAPTER</div><div class="rule"></div><h2 class="title">你的專業，<br>會成為某個人生活裡的<em class="accent">新可能。</em></h2><p class="subtitle">歡迎加入愛迪樂。從每一次傾聽、每一個小目標開始，和團隊一起把照顧帶進生活。</p><div><span class="pill">多聽一點</span><span class="pill">多問一步</span><span class="pill">一起想辦法</span><span class="pill">持續學習</span></div>
+      <div class="foot"><a href="https://adlers.tw/" target="_blank" rel="noreferrer" style="color:inherit">認識愛迪樂 adlers.tw ↗</a><span>謝謝你加入我們</span></div>
+    </section>
+  </main>
+  <div class="controls" aria-label="簡報控制"><button id="prev" aria-label="上一頁">←</button><span class="counter" id="counter">1 / 8</span><button id="next" aria-label="下一頁">→</button><button id="fullscreen" aria-label="全螢幕">⛶</button></div><div class="hint">← → 翻頁　·　F 全螢幕　·　P 列印／另存 PDF</div>
+  <script>
+    const slides=[...document.querySelectorAll('.slide')],counter=document.querySelector('#counter'),progress=document.querySelector('#progress');let current=0;
+    function go(n){current=(n+slides.length)%slides.length;slides.forEach((s,i)=>{s.classList.toggle('active',i===current);s.setAttribute('aria-hidden',i!==current)});counter.textContent=`${current+1} / ${slides.length}`;progress.style.width=`${(current+1)/slides.length*100}%`;}
+    document.querySelector('#prev').addEventListener('click',()=>go(current-1));document.querySelector('#next').addEventListener('click',()=>go(current+1));document.querySelector('#fullscreen').addEventListener('click',()=>document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen?.());
+    document.addEventListener('keydown',e=>{if(['ArrowRight',' ','PageDown'].includes(e.key)){e.preventDefault();go(current+1)}else if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();go(current-1)}else if(e.key==='Home')go(0);else if(e.key==='End')go(slides.length-1);else if(e.key.toLowerCase()==='f')document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen?.();else if(e.key.toLowerCase()==='p')window.print()});
+    let startX=0;document.addEventListener('touchstart',e=>startX=e.changedTouches[0].clientX,{passive:true});document.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-startX;if(Math.abs(dx)>60)go(current+(dx<0?1:-1))},{passive:true});go(0);
+  </script>
+</body>
+</html>
